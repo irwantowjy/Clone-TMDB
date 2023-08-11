@@ -1,7 +1,7 @@
+import Title from "../components/Section/Title";
+
 function Main() {
-  return (
-    <div>Main</div>
-  )
+  return <Title title="Trending" items={["Today", "This Week"]}/> ;
 }
 
-export default Main
+export default Main;

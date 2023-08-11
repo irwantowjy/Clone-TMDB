@@ -1,0 +1,21 @@
+.custom-title{
+    border: 1px solid rgba(3,37,65,1);
+    border-radius: 30px;
+    z-index: 1;
+    gap:40px;
+}
+
+.custom-style{
+    background: linear-gradient(to right,#c0fecf 0,#1ed5a9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}   
+
+.selector{
+    background-color:  rgba(3,37,65,1);
+    left: 0;
+    width: 75px;
+    height: 100%;
+    border-radius: 30px;
+    z-index: -1;
+}
