@@ -1,0 +1,30 @@
+*{
+    font-family: "Source Sans Pro";
+}
+.custom-navbar{
+    height: 64px;
+    background-color: #032541;
+}
+  
+.custom-logo{
+    margin-top: -5px;  
+}
+
+.custom-border{
+    border: 1px solid white;
+    padding: 0.5px 3.5px;
+    border-radius: 3px;
+}
+
+.custom-border:hover{
+    background-color: white;
+    color: #032541;
+}
+
+.center-navbrand {
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+}
+  
+  
