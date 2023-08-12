@@ -1,8 +1,7 @@
-import FetchData from "./Fetch API/FetchData";
+import Trending from "./FetchData/Treding";
 
 function MovieCard() {
-  const { data } = FetchData();
-
+  const { data } = Trending();
   const formatDate = (dateString) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
     return new Date(dateString).toLocaleDateString(undefined, options);

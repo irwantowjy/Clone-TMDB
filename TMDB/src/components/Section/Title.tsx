@@ -5,7 +5,7 @@ import "./Title.css";
 function Title(props: {
   title: string;
   items: string[];
-  onToggle: (value: string) => void;
+  onToggle: (value: number) => void;
 }) {
   const [active, setActive] = useState(false);
   const [getWidth1, setGetWidth1] = useState(0);
@@ -28,7 +28,7 @@ function Title(props: {
   };
 
   const handleToggle = (index: number) => {
-    const selectedValue = props.items[index];
+    const selectedValue = index;
     props.onToggle(selectedValue);
   };
   
