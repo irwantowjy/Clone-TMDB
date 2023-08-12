@@ -1,0 +1,28 @@
+/* Movie.css */
+.movie-carousel {
+  display: flex;
+  overflow-x: auto;
+  max-width: 100%;
+  width: fit-content; 
+  height: 340px; 
+}
+
+.custom-card {
+  flex-shrink: 0;
+}
+
+.custom-card img{
+    border-radius: 10px;
+    width: 150px;
+    height: 225px;
+}
+
+.custom-movie-title{
+    width: 150px;
+    font-size: 16px;
+}
+
+.custom-card p{
+    color: rgba(0,0,0,.6);
+}
+

@@ -1,10 +1,10 @@
-import API from "./services/API";
 import { useEffect } from "react";
 import { useState } from "react";
+import API from "./API";
 
-function App() {
+function FetchData() {
   const [data, setData] = useState([]);
-
+  
   useEffect(() => {
     async function FetchData() {
       const fetchData = await API();
@@ -14,16 +14,7 @@ function App() {
     FetchData();
   }, []);
 
-  return (
-    <div>
-      <h1>Movie List</h1>
-      <ul>
-        {data.map((movie) => (
-          <li key={movie.id}>{movie.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  return { data };
 }
 
-export default App;
+export default FetchData;
