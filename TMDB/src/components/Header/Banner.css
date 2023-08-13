@@ -1,6 +1,11 @@
 .custom-container{
+    width: var(--container-width);
     height: 300px;
     position: relative;
+}
+
+.container{
+    max-width: 1200px !important;
 }
 
 .overlay {

@@ -1,12 +1,12 @@
 import Trending from "./FetchData/Treding";
+import PropTypes from "prop-types";
 
-function MovieCard() {
-  const { data } = Trending();
+const MovieCard = (props) => {
+  const { data } = Trending(props.value);
   const formatDate = (dateString) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
-
   return (
     <>
       {data.map((item) => (
@@ -21,6 +21,10 @@ function MovieCard() {
       ))}
     </>
   );
-}
+};
+
+MovieCard.propTypes = {
+  value: PropTypes.string.isRequired,
+};
 
 export default MovieCard;

@@ -17,6 +17,10 @@
     height: 225px;
 }
 
+.custom-movie{
+  width: var(--container-width);
+}
+
 .custom-movie-title{
     width: 150px;
     font-size: 16px;

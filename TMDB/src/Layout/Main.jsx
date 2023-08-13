@@ -2,7 +2,7 @@ import { useState } from "react";
 import Title from "../components/Section/Title";
 import MovieList from "./../components/Movie/MovieList";
 
-function Main() {
+const Main = () => {
   const [value, setValue] = useState("day");
   const data = ["day", "week"];
 
@@ -10,18 +10,21 @@ function Main() {
     const result = data[selectedValue];
     setValue(result);
   };
-
-  console.log(value)
   return (
-    <>
+    <div>
       <Title
         title="Trending"
         onToggle={handleToggle}
         items={["Today", "This Week"]}
       />
-      <MovieList />
-    </>
+      <MovieList value={value} />
+      <Title
+        title="Trending"
+        onToggle={handleToggle}
+        items={["Today", "This Week"]}
+      />
+    </div>
   );
-}
+};
 
 export default Main;

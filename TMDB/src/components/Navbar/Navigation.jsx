@@ -4,7 +4,7 @@ import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import "./Navigation.css";
 
-function Navigation() {
+const Navigation = () => {
   const [screenSize, setscreenSize] = useState(true);
   useEffect(() => {
     function handleResize() {
@@ -32,7 +32,6 @@ function Navigation() {
   const widthSource = screenSize ? "154" : "55";
 
   // NavBrand height source
-
   const heightSource = screenSize ? "20" : "40";
 
   return (
@@ -150,5 +149,5 @@ function Navigation() {
       </Navbar>
     </>
   );
-}
+};
 export default Navigation;

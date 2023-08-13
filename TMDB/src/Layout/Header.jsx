@@ -1,13 +1,13 @@
-import Container from "../components/Header/Container";
+import Banner from "../components/Header/Banner";
 import Navigation from "../components/Navbar/Navigation";
 
-function Header() {
+const Header = () => {
   return (
     <div>
       <Navigation />
-      <Container />
+      <Banner />
     </div>
   );
-}
+};
 
 export default Header;

@@ -1,18 +1,14 @@
-import React, { useState, useRef, useLayoutEffect } from "react";
-
+import { useState, useRef, useLayoutEffect } from "react";
+import PropTypes from "prop-types";
 import "./Title.css";
 
-function Title(props: {
-  title: string;
-  items: string[];
-  onToggle: (value: number) => void;
-}) {
+const Title = (props) => {
   const [active, setActive] = useState(false);
   const [getWidth1, setGetWidth1] = useState(0);
   const [getWidth2, setGetWidth2] = useState(0);
 
-  const checkItem1 = useRef<HTMLDivElement | null>(null);
-  const checkItem2 = useRef<HTMLDivElement | null>(null);
+  const checkItem1 = useRef(null);
+  const checkItem2 = useRef(null);
 
   useLayoutEffect(() => {
     if (checkItem1.current) {
@@ -21,22 +17,19 @@ function Title(props: {
     if (checkItem2.current) {
       setGetWidth2(checkItem2.current.offsetWidth);
     }
-  }, []);
+  }, [checkItem1, checkItem2]);
 
-  const handleClick = (value: boolean) => {
+  const handleClick = (value) => {
     setActive(value);
   };
 
-  const handleToggle = (index: number) => {
+  const handleToggle = (index) => {
     const selectedValue = index;
     props.onToggle(selectedValue);
   };
-  
-  //index[1] (this week) offsetWidth bug -1px
-  // console.log(checkItem2);
 
   return (
-    <section className="container-fluid col-11 py-3 my-2 align-items-center d-flex">
+    <section className="py-3 title-container mx-auto align-items-center d-flex">
       <h4>{props.title}</h4>
       <div className="d-flex custom-title mx-4 mb-1 position-relative">
         <div
@@ -73,6 +66,12 @@ function Title(props: {
       </div>
     </section>
   );
-}
+};
+
+Title.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onToggle: PropTypes.func.isRequired,
+};
 
 export default Title;

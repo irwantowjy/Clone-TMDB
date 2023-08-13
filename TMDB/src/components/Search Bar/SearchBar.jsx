@@ -2,7 +2,7 @@ import { useRef } from "react";
 import SearchButton from "./SearchButton";
 import "./SearchBar.css";
 
-function SearchBar() {
+const SearchBar = () => {
   const searchRef = useRef();
   const handleSearch = () => {
     console.log(searchRef.current.value);

@@ -1,14 +1,21 @@
 import "./Movie.css";
+import PropTypes from "prop-types";
 import MovieCard from "./MovieCard";
+import Blur from "./../Effect/Blur";
 
-function MovieList() {
+const MovieList = (props) => {
   return (
-    <div className="container-fluid custom-movie col-11">
+    <div className="custom-movie position-relative mx-auto">
       <div className="d-flex gap-4 movie-carousel">
-        <MovieCard />
+        <MovieCard value={props.value} />
+        <Blur />
       </div>
     </div>
   );
-}
+};
+
+MovieList.propTypes = {
+  value: PropTypes.string.isRequired,
+};
 
 export default MovieList;

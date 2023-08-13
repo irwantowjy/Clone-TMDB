@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import SearchBar from "../Search Bar/SearchBar";
-import "./Container.css";
+import "./Banner.css";
 
-function Container() {
+const Banner =()=> {
   const [randomImage, setRandomImage] = useState("");
 
   const renderBanner = () => {
@@ -24,7 +24,7 @@ function Container() {
   }, []);
 
   return (
-    <div className="container-fluid col-11 custom-container d-flex justify-content-center align-items-center">
+    <div className="custom-container mx-auto d-flex justify-content-center align-items-center">
       <div className="banner">
         <div className="overlay"></div>
         <img src={randomImage} alt="Background" className="image" />
@@ -44,4 +44,4 @@ function Container() {
   );
 }
 
-export default Container;
+export default Banner;
