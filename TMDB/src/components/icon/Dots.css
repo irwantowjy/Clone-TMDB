@@ -1,0 +1,13 @@
+.custom-icon svg{
+    width: 25px;
+    height: 25px;
+    fill: white;
+    opacity: 0.5;
+  
+}
+  
+.custom-icon svg:hover{
+    fill: rgba(1,180,228,1);
+    opacity: 1;
+}
+  

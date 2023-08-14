@@ -1,0 +1,2 @@
+-bug di chipny
+-blur msih ikut semua 

@@ -1,3 +1,5 @@
+import ProgressBar from "../ProgressBar/ProgressBar";
+import Dots from "../icon/Dots";
 import Trending from "./FetchData/Treding";
 import PropTypes from "prop-types";
 
@@ -11,11 +13,19 @@ const MovieCard = (props) => {
     <>
       {data.map((item) => (
         <div className="text-black custom-card" key={item.id}>
-          <img
-            src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-            alt="Movie Image"
-          />
-          <h1 className="mt-3 custom-movie-title">{item.title}</h1>
+          <div className="position-relative">
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+              alt="Movie Image"
+            />
+            <div className="position-absolute custom-bar">
+              <ProgressBar vote={item.vote_average} />
+            </div>
+            <div className="position-absolute custom-icon">
+              <Dots/>
+            </div>
+          </div>
+          <h1 className="custom-movie-title">{item.title}</h1>
           <p>{formatDate(item.release_date)}</p>
         </div>
       ))}
