@@ -1,0 +1,29 @@
+.modal {
+    position: relative;
+    top: 30px;
+    right: 100px;
+    z-index: 1000;
+  }
+  
+  .modal.show {
+    background-color: tomato;
+    border-radius: 10px;
+    width: 272px;
+    height: 152px;
+  }
+  
+  .fa-chevron{
+    width: 17px;
+    height: 17px;
+  }
+  
+  .upper-modal{
+    height: 76px;
+    width: 100%;
+    border-bottom: 1px solid #dededf;
+  }
+  
+  .lower-modal{
+    height: 76px;
+    width: 100%;
+  }

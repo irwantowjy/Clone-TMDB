@@ -6,7 +6,7 @@ import Blur from "./../Effect/Blur";
 const MovieList = (props) => {
   return (
     <div className="custom-movie position-relative mx-auto">
-      <div className="d-flex gap-4 movie-carousel">
+      <div className="d-flex movie-carousel gap-4">
         <MovieCard value={props.value} />
         <Blur />
       </div>

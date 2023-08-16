@@ -3,7 +3,8 @@
     height: 25px;
     fill: white;
     opacity: 0.5;
-  
+    right: 10px;
+    position: fixed;
 }
   
 .custom-icon svg:hover{
@@ -11,3 +12,4 @@
     opacity: 1;
 }
   
+
